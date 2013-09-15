@@ -1,0 +1,13 @@
+<%= simple_form_for(@hack) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.association :user %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

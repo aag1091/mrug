@@ -6,4 +6,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :token_authenticatable, :confirmable,
          :lockable, :timeoutable#, :omniauthable
+
+  def name
+    "User #{1}"
+  end
+
 end

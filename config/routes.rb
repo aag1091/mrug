@@ -1,6 +1,11 @@
 Mrug::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  resources :hacks
+
+  resources :shares
+
+  
   devise_for :users
   get "home/index"
   root :to => "home#index"

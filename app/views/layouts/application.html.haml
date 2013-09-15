@@ -22,7 +22,16 @@
   = csrf_meta_tag
 
 %body
+  
+  = render :partial => 'layouts/shared/header'
 
-  = yield
+  .row
+    .large-12.columns.bg-color
+      = yield
+
+  %br
+  %br
+  
+  = render :partial => 'layouts/shared/footer'
 
   = javascript_include_tag "application"

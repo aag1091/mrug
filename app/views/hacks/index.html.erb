@@ -1,0 +1,19 @@
+<h4>Some hacks</h4>
+
+<br/>
+
+<% @hacks.each do |hack| %>
+  <div class="large-12 columns">
+    <div class='large-2 columns'>
+      <span class='button round disabled'><%= hack.created_at.strftime("%d %b %Y")%></span>
+    </div>
+    <div class='large-10 columns'>
+      <%= link_to hack.title, hack %>
+      <p><%= hack.description %></p>
+      <span class="radius secondary label"><a href="#">tag</a></span>
+      <br/>
+      <br/>
+    </div>
+  </div>
+<% end %>
+<%= link_to 'New Hack', new_hack_path %>
