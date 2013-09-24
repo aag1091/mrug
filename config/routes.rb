@@ -1,5 +1,10 @@
 Mrug::Application.routes.draw do
   
+  resources :talks
+
+  resources :events
+
+  mount Ckeditor::Engine => '/ckeditor'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   resources :hacks
 

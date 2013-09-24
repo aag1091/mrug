@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
          :lockable, :timeoutable#, :omniauthable
 
   def name
-    "User #{1}"
+    "User #{id}"
   end
 
 end
